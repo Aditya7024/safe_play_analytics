@@ -22,15 +22,20 @@ Navigate into the project folder:
 
 
 cd safe_play_analytics
+
 📦 Step 3: Install dependencies
 Install all the required npm packages:
 
 
 npm install
+
+
 🚀 Step 4: Start the development server
 Run the development server with the command:
 
 npm run dev
+
+
 🌐 Step 5: Open the app in your browser
 Visit the following URL in your browser:
 
