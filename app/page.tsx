@@ -190,10 +190,7 @@ export default function SafePlayAnalytics() {
                   <CardTitle>Risk Factor Analysis</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ChartContainer
-                    config={chartConfig}
-                    className="h-[300px] w-full"
-                  >
+                  <ChartContainer config={chartConfig} className="h-[300px]">
                     <BarChart
                       data={[
                         {
@@ -222,16 +219,16 @@ export default function SafePlayAnalytics() {
                         },
                       ]}
                     >
-                      <CartesianGrid strokeDasharray="" />
+                      <CartesianGrid strokeDasharray="3 3" />
                       <XAxis
                         dataKey="name"
-                        angle={-30}
+                        angle={-45}
                         textAnchor="end"
                         height={80}
                       />
                       <YAxis />
                       <ChartTooltip content={<ChartTooltipContent />} />
-                      <Bar dataKey="value" fill="green" />
+                      <Bar dataKey="value" fill="var(--color-risk)" />
                     </BarChart>
                   </ChartContainer>
                 </CardContent>
@@ -280,10 +277,7 @@ export default function SafePlayAnalytics() {
                 <CardTitle>Behavioral Pattern Timeline</CardTitle>
               </CardHeader>
               <CardContent>
-                <ChartContainer
-                  config={chartConfig}
-                  className="h-[300px] w-1/2"
-                >
+                <ChartContainer config={chartConfig} className="h-[200px]">
                   <LineChart
                     data={[
                       {
@@ -301,14 +295,14 @@ export default function SafePlayAnalytics() {
                       { time: "Week 4", risk: selectedPlayer.risk_percentage },
                     ]}
                   >
-                    <CartesianGrid strokeDasharray="" />
+                    <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="time" />
                     <YAxis />
                     <ChartTooltip content={<ChartTooltipContent />} />
                     <Line
                       type="monotone"
                       dataKey="risk"
-                      stroke="green"
+                      stroke="var(--color-risk)"
                       strokeWidth={2}
                     />
                   </LineChart>
